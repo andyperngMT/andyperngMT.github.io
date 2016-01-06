@@ -1,150 +1,36 @@
-<%@ page language="java" pageEncoding="UTF-8"
-    contentType="text/html; charset=UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-<title>在线sql2etl格式化工具</title>
-<link rel="stylesheet"
-    href="http://fonts.useso.com/css?family=Arimo:400,700,400italic" />
-<link rel="stylesheet" href="/css/fonts/linecons/css/linecons.css" />
-<link rel="stylesheet"
-    href="/css/fonts/fontawesome/css/font-awesome.min.css" />
-<link rel="stylesheet" href="/css/bootstrap.css" />
-<link rel="stylesheet" href="/css/xenon-core.css" />
-<link rel="stylesheet" href="/css/xenon-forms.css" />
-<link rel="stylesheet" href="/css/xenon-components.css" />
-<link rel="stylesheet" href="/css/xenon-skins.css" />
-<link rel="stylesheet" href="/css/custom.css" />
-<style type="">
-.input_textarea{
-    font-size: 22px !important;
-    width:100%;
-    height:800px;
-}
-</style>
-</head>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Andyperng&#39; blog by andyperngMT</title>
 
-<body>
-    <div class="aw-container-wrap">
-        <div class="container">
-            <div class="row">
-                <div class="aw-content-wrap clearfix">
-                    <div class=" aw-main-content"
-                        style="min-height: 700px; max-height: 2000px">
-                        <nav class="navbar navbar-default">
-                        <div class="container-fluid">
-                            <ul class="nav navbar-nav" style="width: 200%;">
-                                <li class="dropdown"><a href="#" class="dropdown-toggle"
-                                    id="jsontools" data-toggle="dropdown" role="button"
-                                    aria-haspopup="true" aria-expanded="false"> ETL模板选择<span
-                                        class="caret"></span>
-                                </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="/sql2etl/mysql/">mysql</a></li>
-                                        <li><a href="/sql2etl/hive/" target="_blank">hive</a></li>
-                                    </ul></li>
-                                <li class="dropdown"><a href="#" class="dropdown-toggle"
-                                    id="downloada" data-toggle="dropdown" role="button"
-                                    aria-haspopup="true" aria-expanded="false">联系我们<span
-                                        class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="/contact/">mis : pengchenglong</a></li>
-                                        <li><a href="/contact/" target="_blank">qq :
-                                                287651721</a></li>
-                                    </ul></li>
-                            </ul>
-                        </div>
-                        </nav>
-                        <div style="clear: both"></div>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Andyperng&#39; blog</h1>
+        <p>我的博客</p>
+        <p class="view"><a href="https://github.com/andyperngMT">View My GitHub Profile</a></p>
+      </header>
+      <section>
+        <h3>
+<a id="welcome-to-my-github-blog" class="anchor" href="#welcome-to-my-github-blog" aria-hidden="true"><span class="octicon octicon-link"></span></a>welcome to my github blog</h3>
 
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <div class="media">
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Be ETLer,Have fun!!!</h4>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="col-sm-6" style="padding-left:0px;">
-                                            <textarea id="json_input" name="json_input" class="input_textarea"
-                                                spellcheck="false" placeholder="输入需要生成ETL的SQL语句"></textarea>
-                                        </div>
-                                        
-                                        <div class="col-sm-6">
-                                            <textarea id="etl_input" name="etl_input" class="input_textarea"
-                                           spellcheck="false" placeholder="输入需要生成ETL的SQL语句"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12"  style="padding-top:10px;">
-                                        <div class="btn-group" role="group" aria-label="...">
-                                            <button id="btn_submit" class="btn btn-primary">生成ETL</button>
-                                            <input name="validate" class="btn btn-danger"
-                                                onclick="javascript:$('#json_input').focus(); "
-                                                type="reset" value="恢复" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<h2>
+<a id="test-markdown" class="anchor" href="#test-markdown" aria-hidden="true"><span class="octicon octicon-link"></span></a>test markdown</h2>
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
-
-    <script src="/js/jquery-1.11.1.min.js"></script>
-    <script>
-/* function alertMessage(){
-    jQuery.ajax({
-            type: "GET",
-            //async: false,
-            //url: 'http://www.bejson.com/api/bejson/fetch.php?u='+encodeURIComponent(jv),
-            url: '/sql2etl/mysql',
-            dataType: "json",
-            data:{},
-           // cache: false,
-            success: function (j) {
-                $("#etl_input").val(j.msg);
-            }
-            });
-} */
-
-$(function () {
-    showaban = false;
-    $("#btn_submit").click(function(){
-           var jv =$("#json_input").val();
-            jQuery.ajax({
-                type: "get",
-                async: false,
-                url: '/sql2etl/mysql/',
-                dataType: "json",
-                data:{
-                       id:jv
-                },
-                success: function (j) {
-                    console.log(j)
-                    $("#etl_input").val(j.msg);
-                    },
-                error: function (err) {
-                    $("#etl_input").val(j.msg);
-                }
-        });
-    });
-});    
-</script>
-    <!-- Bottom Scripts -->
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/TweenMax.min.js"></script>
-    <script src="/js/resizeable.js"></script>
-    <script src="/js/joinable.js"></script>
-    <script src="/js/xenon-api.js"></script>
-    <script src="/js/xenon-toggles.js"></script>
-
-    <!-- JavaScripts initializations and stuff -->
-    <script src="/js/xenon-custom.js"></script>
-</body>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
 </html>
